@@ -1,27 +1,27 @@
 package br.com.buscape.steps;
 
 import br.com.buscape.pages.CategoriasPage;
-import br.com.buscape.pages.HomePage;
-import io.qameta.allure.Epic;
-import io.qameta.allure.junit4.DisplayName;
+import cucumber.api.java.pt.E;
+import cucumber.api.java.pt.Entao;
+import cucumber.api.java.pt.Quando;
 import org.junit.Assert;
-import org.junit.Test;
 
-public class CategoriasSteps extends BaseSteps {
+public class CategoriasSteps {
 
-    // Instanciar
-    HomePage homePage = new HomePage();
     CategoriasPage categoriasPage = new CategoriasPage();
 
-    @Test
-    @Epic("Categorias")
-    @DisplayName("Validar busca produtos por Categoria")
-    public void deveBuscarProdutosPorCategoria() {
-        homePage.clicarNoBotaoCategorias();
-
+    @E("clico no botão categoria")
+    public void clicarEmUmaCategoria() {
         categoriasPage.clicarNoBotaoCategoria();
-        categoriasPage.clicarNoBotaoSubCategoria();
+    }
 
+    @Quando("clico no botão subcategoria")
+    public void clicarEmUmaSubcategoria() {
+        categoriasPage.clicarNoBotaoSubCategoria();
+    }
+
+    @Entao("devo ser redirecionado para a tela da subcategoria escolhida")
+    public void visualizarTelaDeProdutosPorSubcategoria() {
         Assert.assertEquals("Notebook Macbook Air", categoriasPage.validarTextoCategoriaEscolhidaNaTela());
         //Assert.assertTrue(categoriasPage.checkboxLinhaSelecionado());
         Assert.assertEquals("https://www.buscape.com.br/notebook/macbook-air",
