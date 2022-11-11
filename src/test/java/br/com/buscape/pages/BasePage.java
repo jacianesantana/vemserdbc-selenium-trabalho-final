@@ -11,6 +11,12 @@ public class BasePage extends Elements {
         element(by).click();
     }
 
+    // Está Selecionado
+    public static Boolean isSelected(By by) {
+        waitElement(by);
+        return element(by).isSelected();
+    }
+
     // Escrever
     public static void sendKeys(By by, String texto) {
         waitElement(by);
@@ -24,10 +30,8 @@ public class BasePage extends Elements {
     }
 
     // Recuperar url atual
-/*    public static String getCurrentUrl(By by) {
-        waitElement(by);
-        //return element(by).getCurrentUrl();
+    public static String getCurrentUrl() {
         return driver.getCurrentUrl();
-    }*/
+    }
 
 }
