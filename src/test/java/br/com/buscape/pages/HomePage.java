@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 
 public class HomePage extends BasePage {
 
-    // Mapeamento
     private static final By btnCategorias =
             By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_" +
                     "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > " +
