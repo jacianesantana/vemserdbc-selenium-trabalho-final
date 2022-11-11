@@ -1,6 +1,6 @@
 package br.com.buscape.steps;
 
-import com.herokuapp.automacaocombatista.util.Browser;
+import br.com.buscape.util.Browser;
 import org.junit.After;
 import org.junit.Before;
 
