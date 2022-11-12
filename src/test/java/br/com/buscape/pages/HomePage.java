@@ -1,5 +1,6 @@
 package br.com.buscape.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class HomePage extends BasePage {
@@ -13,11 +14,44 @@ public class HomePage extends BasePage {
                     "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > " +
                     "div.DoubleHeader_second-column__OFGbE.col > nav > ul > li:nth-child(6) > a");
 
+    private static final By btnInformeSeuCep =
+            By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_VariantBlack" +
+                    "Friday__PcBIq.DoubleHeader_second-line__qIShd > div > div > div.col-lg-2 > div > button");
+
+    private static final By textValidateCepInformado =
+            By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_" +
+                    "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > div.col-lg-2 > " +
+                    "div > button > span.Text_Text__VJDNU.Text_LabelSmRegular__qvxsr.ButtonWithIcon_" +
+                    "Label__H5xe9.AddressRegion_ButtonLabel__e4sf4 > span:nth-child(3)");
+
+    @Step("Clicar em Categorias")
     public void clicarNoBotaoCategorias() {
         click(btnCategorias);
     }
+
+    @Step("Clicar em Cashback")
     public void clicarNoBotaoCashback() {
         click(btnCashback);
+    }
+
+    @Step("Clicar em Informe seu CEP")
+    public void clicarNoBotaoInformeSeuCep() {
+        click(btnInformeSeuCep);
+    }
+
+    @Step("Validar texto CEP informado na tela")
+    public String validarTextoCepInformadoNaTela() {
+        return getText(textValidateCepInformado);
+    }
+
+    @Step("Validar texto Informe seu CEP na tela")
+    public String validarTextoInformeSeuCepNaTela() {
+        return getText(btnInformeSeuCep);
+    }
+
+    @Step("Validar url atual")
+    public String validarUrlAtual() {
+        return getCurrentUrl();
     }
 
 }

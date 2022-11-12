@@ -31,7 +31,7 @@ public class CategoriasPage extends BasePage {
         click(btnSubcategoria);
     }
 
-    @Step("Validar texto dategoria escolhida na tela")
+    @Step("Validar texto da categoria escolhida na tela")
     public String validarTextoCategoriaEscolhidaNaTela() {
         return getText(textValidateProdutosPorCategoria);
     }

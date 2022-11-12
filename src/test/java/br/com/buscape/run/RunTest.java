@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/main/resources/features",
         tags = {"@wip"},
         glue = "br/com/buscape/steps",
-        plugin = { "pretty", "io.qameta.allure.cucumberjvm.AllureCucumberJvm"},
+        plugin = {"pretty", "io.qameta.allure.cucumberjvm.AllureCucumberJvm"},
         snippets = SnippetType.CAMELCASE
 )
 public class RunTest {

@@ -8,7 +8,7 @@
       @wip
       Cenario: Validar botao selecao Categorias com sucesso
         Dado que estou na página Home
-        E que acesso Categorias
+        E acesso Categorias
         E clico no botão categoria
         Quando clico no botão subcategoria
         Entao devo ser redirecionado para a tela da subcategoria escolhida
