@@ -2,6 +2,7 @@ package br.com.buscape.pages;
 
 import br.com.buscape.util.Elements;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 
 public class BasePage extends Elements {
 
@@ -32,6 +33,16 @@ public class BasePage extends Elements {
     // Recuperar url atual
     public static String getCurrentUrl() {
         return driver.getCurrentUrl();
+    }
+
+    public boolean isElementPresent(By by){
+        try{
+            driver.findElement(by);
+            return true;
+        }
+        catch(NoSuchElementException e){
+            return false;
+        }
     }
 
 }

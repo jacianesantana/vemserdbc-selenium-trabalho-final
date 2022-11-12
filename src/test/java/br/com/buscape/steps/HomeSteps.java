@@ -41,4 +41,25 @@ public class HomeSteps {
         Assert.assertEquals("Informe seu CEP", homePage.validarTextoInformeSeuCepNaTela());
     }
 
+    @Quando("clico no botão ENTRAR")
+    public void clicarEmEntrar() {
+        homePage.clicarNoBotaoEntrar();
+    }
+
+    @E("preencho campo search com nome de categoria válido")
+    public void preencherCampoPesquisaValido() {
+        homePage.preencherCampoPesquisaValido();
+    }
+
+    @Quando("clico no botão pesquisar")
+    public void clicarEmPesquisar() {
+        homePage.clicarNoBotaoPesquisa();
+    }
+
+    @Entao("devo visualizar uma lista de produtos desta categoria")
+    public void visualizarTextoDaPesquisaNaTela() {
+        Assert.assertEquals("Celular", homePage.validarTextoPesquisaNaTela());
+        Assert.assertEquals("https://www.buscape.com.br/search?q=Celular", homePage.validarUrlAtual());
+    }
+
 }
