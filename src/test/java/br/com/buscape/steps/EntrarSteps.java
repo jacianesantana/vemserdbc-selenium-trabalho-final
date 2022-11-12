@@ -99,6 +99,7 @@ public class EntrarSteps {
 
     @Entao("devo ser redirecionado para a página do acesso Google")
     public void visualizarTelaDeAcessoGoogle() {
-        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));    }
+        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));
+    }
 
 }

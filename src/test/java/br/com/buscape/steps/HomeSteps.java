@@ -62,4 +62,9 @@ public class HomeSteps {
         Assert.assertEquals("https://www.buscape.com.br/search?q=Celular", homePage.validarUrlAtual());
     }
 
+    @Quando("clico no botão Cupons de Desconto")
+    public void clicarEmCupons() {
+        homePage.clicarNoBotaoCupons();
+    }
+
 }
