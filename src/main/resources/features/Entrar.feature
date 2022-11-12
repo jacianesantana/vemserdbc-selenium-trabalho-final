@@ -42,14 +42,14 @@ Funcionalidade: Entrar
     Entao não devo avançar no cadastro do sistema
 
   @wip
-  Cenario: Validar botão "Termos de uso" com sucesso
+  Cenario: Validar botão Termos de uso com sucesso
     Dado que estou na página Home
     Quando clico no botão ENTRAR
     Quando clico no botão Termos de Uso
     Então devo ser redirecionado para a tela de termos de uso
 
   @wip
-  Cenario: Validar botão "Política de Privacidade" com sucesso
+  Cenario: Validar botão Política de Privacidade com sucesso
     Dado que estou na página Home
     Quando clico no botão ENTRAR
     Quando clico no botão Política de Privacidade
@@ -63,7 +63,7 @@ Funcionalidade: Entrar
     Então devo ser redirecionado para a página do acesso Facebook
 
   @wip
-  Cenario: Validar login com sucesso com Facebook
+  Cenario: Validar login com sucesso com Google
     Dado que estou na página Home
     Quando clico no botão ENTRAR
     Quando clico no boão Continuar com Google
