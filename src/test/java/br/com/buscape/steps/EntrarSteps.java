@@ -57,4 +57,48 @@ public class EntrarSteps {
         Assert.assertFalse(entrarPage.isElementPresent(By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__FormGroup-sc-160wlc5-0.iAIdTC.focused.valid.form-group > button")));
     }
 
+    @E("não preencho o campo email")
+    public void preencherCampoEmailBranco() {
+        entrarPage.preencherCampoEmailBranco();
+    }
+
+    @Quando("clico no botão Termos de Uso")
+    public void clicarEmTermos() {
+        entrarPage.clicarNoBotaoTermosDeUso();
+    }
+
+    @Quando("clico no botão Política de Privacidade")
+    public void clicarEmPolitica() {
+        entrarPage.clicarNoBotaoPoliticaDePrivacidade();
+    }
+
+    @Entao("devo ser redirecionado para a tela de termos de uso")
+    public void visualizarTelaDeTermosDeUso() {
+        Assert.assertEquals("https://www.buscape.com.br/conta/termos-de-uso", entrarPage.validarUrlAtual());
+    }
+
+    @Entao("devo ser redirecionado para a tela de política de privacidade")
+    public void visualizarTelaDePoliticas() {
+        Assert.assertEquals("https://www.buscape.com.br/conta/politica-de-privacidade", entrarPage.validarUrlAtual());
+    }
+
+    @Quando("clico no boão Continuar com Facebook")
+    public void clicarEmFacebook() {
+        entrarPage.clicarNoBotaoFacebook();
+    }
+
+    @Entao("devo ser redirecionado para a página do acesso Facebook")
+    public void visualizarTelaDeAcessoFacebook() {
+        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));
+    }
+
+    @Quando("clico no boão Continuar com Google")
+    public void clicarEmGoogle() {
+        entrarPage.clicarNoBotaoGoogle();
+    }
+
+    @Entao("devo ser redirecionado para a página do acesso Google")
+    public void visualizarTelaDeAcessoGoogle() {
+        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));    }
+
 }

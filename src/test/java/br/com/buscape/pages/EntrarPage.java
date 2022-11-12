@@ -24,6 +24,19 @@ public class EntrarPage extends BasePage{
 
     private static final By textValidateEmailEnter =
             By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div > p.tags__P-sc-havy7z-1.tags__Email-sc-havy7z-2.caCuex.hVLFZP");
+
+    private static final By bntTermosDeUso =
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(2)");
+
+    private static final By bntPoliticaDePrivacidade =
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(3)");
+
+    private static final By bntFacebook =
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__Facebook-sc-1pvvwwi-2.fOqsQW.gqgrkh.ga-btn-facebook");
+
+    private static final By bntGoogle =
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__Google-sc-1pvvwwi-3.fOqsQW.fBUkRa.ga-btn-google");
+
     @Step("Validar texto Entre e aproveite informado na tela")
     public String validarTextoEntreNaTela() {
         return getText(textValidateEnter);
@@ -44,6 +57,11 @@ public class EntrarPage extends BasePage{
         sendKeys(campoEmail, "teste@teste.com");
     }
 
+    @Step("Preencher campo com email branco")
+    public void preencherCampoEmailBranco() {
+        sendKeys(campoEmail, "");
+    }
+
     @Step("Clicar no botão avançar")
     public void clicarNoBotaoAvancar() {
         click(bntAvancar);
@@ -62,6 +80,26 @@ public class EntrarPage extends BasePage{
     @Step("Validar texto do email do usuario na tela")
     public String validarTextoEmailUsuarioNaTela() {
         return getText(textValidateEmailEnter);
+    }
+
+    @Step("Clicar no Termos de Uso")
+    public void clicarNoBotaoTermosDeUso() {
+        click(bntTermosDeUso);
+    }
+
+    @Step("Clicar no botão Politica de Privacidade")
+    public void clicarNoBotaoPoliticaDePrivacidade() {
+        click(bntPoliticaDePrivacidade);
+    }
+
+    @Step("Clicar no botão Facebook")
+    public void clicarNoBotaoFacebook() {
+        click(bntFacebook);
+    }
+
+    @Step("Clicar no botão Google")
+    public void clicarNoBotaoGoogle() {
+        click(bntGoogle);
     }
 
     @Step("Validar url atual")
