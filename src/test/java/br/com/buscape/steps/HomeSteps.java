@@ -41,4 +41,11 @@ public class HomeSteps {
         Assert.assertEquals("Informe seu CEP", homePage.validarTextoInformeSeuCepNaTela());
     }
 
+    @Quando("clico no botão ENTRAR")
+    public void clicarEmEntrar() {
+        homePage.clicarNoBotaoEntrar();
+    }
+
+
+
 }

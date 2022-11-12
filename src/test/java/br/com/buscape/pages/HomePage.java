@@ -24,6 +24,11 @@ public class HomePage extends BasePage {
                     "div > button > span.Text_Text__VJDNU.Text_LabelSmRegular__qvxsr.ButtonWithIcon_" +
                     "Label__H5xe9.AddressRegion_ButtonLabel__e4sf4 > span:nth-child(3)");
 
+    private static final By btnEntrar =
+            By.cssSelector("#new-header > div:nth-child(1) > div > div > div.DoubleHeaderOrdering_newUserItem__h56oR.col-xl-3.col-lg-4 > div > div");
+
+
+
     @Step("Clicar em Categorias")
     public void clicarNoBotaoCategorias() {
         click(btnCategorias);
@@ -47,6 +52,10 @@ public class HomePage extends BasePage {
     @Step("Validar texto Informe seu CEP na tela")
     public String validarTextoInformeSeuCepNaTela() {
         return getText(btnInformeSeuCep);
+    }
+    @Step
+    public void clicarNoBotaoEntrar() {
+        click(btnEntrar);
     }
 
     @Step("Validar url atual")
