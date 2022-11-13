@@ -5,7 +5,7 @@
 
     Contexto: O usuario deve buscar produtos por categoria e subcategoria
 
-      @wip
+      @smoke
       Cenario: Validar botao selecao Categorias com sucesso
         Dado que estou na página Home
         E acesso Categorias

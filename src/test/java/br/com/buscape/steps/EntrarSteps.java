@@ -7,8 +7,6 @@ import cucumber.api.java.pt.Quando;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-import static br.com.buscape.util.Browser.driver;
-
 public class EntrarSteps {
     EntrarPage entrarPage = new EntrarPage();
 
@@ -16,7 +14,8 @@ public class EntrarSteps {
     public void visualizarEntreEAproveiteNaTela() {
         Assert.assertEquals("Entre e aproveite\n" +
                 "benefícios exclusivos!", entrarPage.validarTextoEntreNaTela());
-        Assert.assertEquals("https://login.buscape.com.br/login?redirect=https%3A%2F%2Fwww.buscape.com.br%2F", entrarPage.validarUrlAtual());
+        Assert.assertEquals("https://login.buscape.com.br/login?redirect=https%3A%2F%2Fwww.buscape.com.br%2F",
+                entrarPage.validarUrlAtual());
     }
 
     @E("preencho email valido")
@@ -54,7 +53,10 @@ public class EntrarSteps {
 
     @Entao("não devo avançar no cadastro do sistema")
     public void naoVisualizarBotaoAvancar() {
-        Assert.assertFalse(entrarPage.isElementPresent(By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__FormGroup-sc-160wlc5-0.iAIdTC.focused.valid.form-group > button")));
+        Assert.assertFalse(entrarPage.isElementPresent(By.cssSelector("" +
+                "#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > " +
+                "div.tags__FormGroup-sc-160wlc5-0.iAIdTC.focused.valid.form-group > button"
+        )));
     }
 
     @E("não preencho o campo email")
@@ -79,7 +81,8 @@ public class EntrarSteps {
 
     @Entao("devo ser redirecionado para a tela de política de privacidade")
     public void visualizarTelaDePoliticas() {
-        Assert.assertEquals("https://www.buscape.com.br/conta/politica-de-privacidade", entrarPage.validarUrlAtual());
+        Assert.assertEquals("https://www.buscape.com.br/conta/politica-de-privacidade",
+                entrarPage.validarUrlAtual());
     }
 
     @Quando("clico no boão Continuar com Facebook")
@@ -99,6 +102,7 @@ public class EntrarSteps {
 
     @Entao("devo ser redirecionado para a página do acesso Google")
     public void visualizarTelaDeAcessoGoogle() {
-        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));    }
+        Assert.assertTrue(entrarPage.validarUrlAtual().contains("login.buscape.com.br"));
+    }
 
 }

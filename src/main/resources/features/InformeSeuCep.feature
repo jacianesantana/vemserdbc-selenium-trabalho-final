@@ -5,7 +5,7 @@
 
     Contexto: O usuario deve informar seu CEP e visualiza-lo na tela
 
-      @wip
+      @smoke
       Cenario: Validar Informe seu CEP com sucesso preenchendo CEP valido
         Dado que estou na página Home
         E clico no botão Informe seu CEP
@@ -13,7 +13,7 @@
         Quando clico no botão Confirmar
         Entao devo visualizar o CEP informado na tela home
 
-      @wip
+      @smoke
       Cenario: Validar tentativa de Informe seu CEP preenchendo campo com CEP invalido
         Dado que estou na página Home
         E clico no botão Informe seu CEP
@@ -21,7 +21,7 @@
         Quando clico no botão Confirmar
         Entao devo receber mensagem de erro padrão 'CEP inválido'
 
-      @wip
+      @smoke
       Cenario: Validar tentativa de Informe seu CEP preenchendo campo com caracteres invalidos
         Dado que estou na página Home
         E clico no botão Informe seu CEP
@@ -29,7 +29,7 @@
         Quando clico no botão Confirmar
         Entao devo receber mensagem de erro padrão 'CEP inválido'
 
-      @wip
+      @smoke
       Cenario: Validar tentativa de Informe seu CEP sem preencher campo CEP
         Dado que estou na página Home
         E clico no botão Informe seu CEP

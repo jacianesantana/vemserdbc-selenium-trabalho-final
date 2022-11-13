@@ -35,6 +35,7 @@ public class BasePage extends Elements {
         return driver.getCurrentUrl();
     }
 
+    // Elemento está presente
     public boolean isElementPresent(By by){
         try{
             driver.findElement(by);
