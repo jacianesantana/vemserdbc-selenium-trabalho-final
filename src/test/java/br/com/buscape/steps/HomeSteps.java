@@ -46,4 +46,9 @@ public class HomeSteps {
         homePage.clicarNoBotaoEntrar();
     }
 
+    @Quando("clico no botão Cupons de Desconto")
+    public void clicarEmCupons() {
+        homePage.clicarNoBotaoCupons();
+    }
+
 }

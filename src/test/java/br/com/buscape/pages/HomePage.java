@@ -13,20 +13,22 @@ public class HomePage extends BasePage {
             By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_" +
                     "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > " +
                     "div.DoubleHeader_second-column__OFGbE.col > nav > ul > li:nth-child(6) > a");
-
     private static final By btnInformeSeuCep =
             By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_VariantBlack" +
                     "Friday__PcBIq.DoubleHeader_second-line__qIShd > div > div > div.col-lg-2 > div > button");
-
     private static final By textValidateCepInformado =
             By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_" +
                     "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > div.col-lg-2 > " +
                     "div > button > span.Text_Text__VJDNU.Text_LabelSmRegular__qvxsr.ButtonWithIcon_" +
                     "Label__H5xe9.AddressRegion_ButtonLabel__e4sf4 > span:nth-child(3)");
-
     private static final By btnEntrar =
             By.cssSelector("#new-header > div:nth-child(1) > div > div > div.DoubleHeaderOrdering_" +
                     "newUserItem__h56oR.col-xl-3.col-lg-4 > div > div");
+    private static final By bntCupons =
+            By.cssSelector("#new-header > div.new-zheader.DoubleHeader_new-zheader__AmjXA.DoubleHeader_" +
+                    "VariantBlackFriday__PcBIq.DoubleHeader_second-line__qIShd > div > div > " +
+                    "div.DoubleHeader_second-column__OFGbE.col > nav > ul > li:nth-child(3) > " +
+                    "a > span.Text_Text__VJDNU.Text_LabelSmRegular__qvxsr.ButtonWithIcon_Label__H5xe9");
 
     @Step("Clicar em Categorias")
     public void clicarNoBotaoCategorias() {
@@ -55,6 +57,11 @@ public class HomePage extends BasePage {
     @Step
     public void clicarNoBotaoEntrar() {
         click(btnEntrar);
+    }
+
+    @Step
+    public void clicarNoBotaoCupons() {
+        click(bntCupons);
     }
 
     @Step("Validar url atual")
