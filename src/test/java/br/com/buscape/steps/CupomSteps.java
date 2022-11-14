@@ -51,7 +51,8 @@ public class CupomSteps {
 
     @Entao("devo visualizar os cupons desta loja")
     public void visualizarCuponsDaLojaNaTela() {
-        Assert.assertEquals("Cupons de desconto e cashback na Amazon", cupomPage.validarTextoCuponsLojaNaTela());
+        Assert.assertEquals("Cupons de desconto e cashback na Amazon",
+                cupomPage.validarTextoCuponsLojaNaTela());
     }
 
     @Quando("preencho o search com caracteres inválidos")
@@ -61,7 +62,8 @@ public class CupomSteps {
 
     @Entao("devo visualizar mensagem de erro 'Ops, não encontramos resultados para a sua pesquisa.'")
     public void visualizarErroLojaNaTela() {
-        Assert.assertEquals("Ops, não encontramos resultados para a sua pesquisa.", cupomPage.validarTextoErroLojaNaTela());
+        Assert.assertEquals("Ops, não encontramos resultados para a sua pesquisa.",
+                cupomPage.validarTextoErroLojaNaTela());
     }
 
 }

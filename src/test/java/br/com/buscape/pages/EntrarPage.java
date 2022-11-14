@@ -8,34 +8,36 @@ public class EntrarPage extends BasePage{
     Faker faker = new Faker();
 
     private static final By textValidateEnter =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > p");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > p");
     private static final By campoEmail =
             By.cssSelector("[id=\"email\"]");
-
     private static final By bntAvancar =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__FormGroup-sc-160wlc5-0.iAIdTC.focused.valid.form-group > button");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div.tags__FormGroup-sc-160wlc5-0.iAIdTC.focused.valid.form-group > button");
     private static final By textValidateEmail =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div > h1");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div > h1");
     private static final By textValidateCodeEmail =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div > p:nth-child(1)");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div > p:nth-child(1)");
     private static final By textValidateEmailEnter =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div > p.tags__P-sc-havy7z-1.tags__Email-sc-havy7z-2.caCuex.hVLFZP");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div > p.tags__P-sc-havy7z-1.tags__Email-sc-havy7z-2.caCuex.hVLFZP");
     private static final By bntTermosDeUso =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(2)");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(2)");
     private static final By bntPoliticaDePrivacidade =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(3)");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div.tags__Terms-sc-160wlc5-4.dnBpnX > a:nth-child(3)");
     private static final By bntFacebook =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__Facebook-sc-1pvvwwi-2.fOqsQW.gqgrkh.ga-btn-facebook");
-
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__" +
+                    "Facebook-sc-1pvvwwi-2.fOqsQW.gqgrkh.ga-btn-facebook");
     private static final By bntGoogle =
-            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__Google-sc-1pvvwwi-3.fOqsQW.fBUkRa.ga-btn-google");
+            By.cssSelector("#__next > div > main > div > div.MainWrapper__ContainerBuscape-sc-1v1m6ca-2.cmnkOI > " +
+                    "form > div.tags__Div-sc-1pvvwwi-0.hzzHw > span.tags__Button-sc-1pvvwwi-1.tags__" +
+                    "Google-sc-1pvvwwi-3.fOqsQW.fBUkRa.ga-btn-google");
 
     @Step("Validar texto Entre e aproveite informado na tela")
     public String validarTextoEntreNaTela() {
@@ -106,4 +108,5 @@ public class EntrarPage extends BasePage{
     public String validarUrlAtual() {
         return getCurrentUrl();
     }
+
 }

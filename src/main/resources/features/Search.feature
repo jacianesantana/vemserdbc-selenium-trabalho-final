@@ -5,7 +5,7 @@
 
     Contexto: O usuario deve buscar produtos na aba de pesquisa
 
-      @wip
+      @smoke
       Cenario: Validar Search com sucesso preenchendo com nome da categoria
         Dado que estou na página Home
         E preencho campo search com nome de categoria válido
@@ -33,7 +33,7 @@
         Quando clico no botão pesquisar
         Entao devo visualizar uma mensagem de erro padrão: 'Não encontramos resultados'
 
-      @wip
+      @smoke
       Cenario: Validar tentativa de Search preenchendo com caractere hifen
         Dado que estou na página Home
         E preencho campo search com caractere '-'

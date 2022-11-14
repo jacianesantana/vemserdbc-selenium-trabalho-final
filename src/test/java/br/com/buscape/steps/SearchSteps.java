@@ -25,7 +25,7 @@ public class SearchSteps {
         Assert.assertEquals("Celular", searchPage.validarTextoPesquisaNaTela());
         Assert.assertEquals("Categoria : Celular e Smartphone",
                 searchPage.validarFiltroSelecionadoDaCategoriaNaTela());
-        Assert.assertEquals("https://www.buscape.com.br/search?q=Celular", searchPage.validarUrlAtual());
+        Assert.assertEquals("https://www.buscape.com.br/search?q=celular", searchPage.validarUrlAtual());
     }
 
     @E("preencho campo search com nome de marca válido")
@@ -50,7 +50,7 @@ public class SearchSteps {
     @Entao("devo visualizar uma lista de produtos desta loja")
     public void visualizarPesquisaDeLojaNaTela() {
         Assert.assertEquals("Americanas", searchPage.validarTextoPesquisaNaTela());
-        Assert.assertFalse(searchPage.checkboxFiltroLojaSelecionado());
+        Assert.assertTrue(searchPage.checkboxFiltroLojaSelecionado());
         Assert.assertEquals("https://www.buscape.com.br/search?q=americanas", searchPage.validarUrlAtual());
     }
 
@@ -73,7 +73,7 @@ public class SearchSteps {
 
     @Entao("devo visualizar resultado com espaço substituindo o '-'")
     public void visualizarPesquisaComNomeValido() {
-        Assert.assertEquals("Guarda-roupas", searchPage.validarTextoPesquisaNaTela());
+        Assert.assertEquals("Guarda roupas", searchPage.validarTextoPesquisaNaTela());
         Assert.assertEquals("https://www.buscape.com.br/search?q=guarda-roupas", searchPage.validarUrlAtual());
     }
 

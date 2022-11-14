@@ -23,7 +23,7 @@ public class SearchPage extends BasePage {
     private static final By textValidateFiltroMarca =
             By.cssSelector("#applied-filters > div.AppliedFilters_AppliedFiltersItems__yoK3h > " +
                     "button:nth-child(4) > span.Text_Text__bOTfK.Text_DesktopLabelS__irDld.Chip_Text__soEYn");
-    private static final By checkboxFiltroLoja =
+    private static final By checkboxValidateFiltroLoja =
             By.cssSelector("#__next > div.Content_Container__heIrp.Content_WhenNoBreadcrumbs__o1Gb0.container-lg > " +
                     "div > div.Content_FilterWrapper__96aeF.col-lg-3 > div > aside > div:nth-child(6) > ul > " +
                     "li:nth-child(1) > a > div > div > span");
@@ -61,7 +61,7 @@ public class SearchPage extends BasePage {
         sendKeys(campoPesquisa, "");
     }
 
-    @Step
+    @Step("Validar botão pesquisa")
     public void clicarNoBotaoPesquisa() {
         click(bntPesquisa);
     }
@@ -83,7 +83,7 @@ public class SearchPage extends BasePage {
 
     @Step("Validar checkbox filtro loja selecionado")
     public Boolean checkboxFiltroLojaSelecionado() {
-        return isSelected(checkboxFiltroLoja);
+        return isSelected(checkboxValidateFiltroLoja);
     }
 
     @Step("Validar mensagem de erro na tela")

@@ -17,9 +17,8 @@ public class CashbackSteps {
     }
 
     @E("clico no botão Entender Regras")
-    public void clicarBotaoEntenderRegras() {
-        //cashbackPage.clicarNoBotaoEntenderRegras();
-        cashbackPage.clicarElemento();
+    public void clicarBotaoEntenderRegras() throws InterruptedException {
+        cashbackPage.clicarNoBotaoEntenderRegras();
     }
 
     @Entao("devo ser redirecionado para a tela de entender regras")
@@ -31,7 +30,7 @@ public class CashbackSteps {
     }
 
     @E("clico no botão Ver Dúvidas Frequentes de resgate")
-    public void clicarBotaoVerDuvidasFrequentesDeResgate() {
+    public void clicarBotaoVerDuvidasFrequentesDeResgate() throws InterruptedException {
         cashbackPage.clicarNoBotaoVerDuvidasFrequentesDeResgate();
     }
 
@@ -44,7 +43,7 @@ public class CashbackSteps {
     }
 
     @E("clico no botão Ver Dúvidas Frequentes de saldo e extrato")
-    public void clicarBotaoVerDuvidasFrequentesDeSaldoEExtrato() {
+    public void clicarBotaoVerDuvidasFrequentesDeSaldoEExtrato() throws InterruptedException {
         cashbackPage.clicarNoBotaoVerDuvidasFrequentesDeSaldoEExtrato();
     }
 
